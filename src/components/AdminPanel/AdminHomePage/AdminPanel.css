@@ -1,0 +1,26 @@
+
+  
+  .product-card {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  .Add-button{
+    margin-right: 14px;
+  }
+  .adminpanel{
+    min-height: 80%;
+  }
