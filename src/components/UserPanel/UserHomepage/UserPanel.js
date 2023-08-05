@@ -110,7 +110,11 @@ const UserPanel = ({ products }) => {
   const handleCloseCart = () => {
     setIsCartOpen(false);
   };
-
+  const handleLogout = () => {
+    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    window.location.href = '/';
+  };
   const cartItemCount =
     cart.length > 0 ? Math.pow(2, Math.ceil(Math.log2(cart.length))) : 0;
 
@@ -137,6 +141,11 @@ const UserPanel = ({ products }) => {
           decreaseQuantity={decreaseQuantity}
           onClose={handleCloseCart}
         />
+      </div>
+      <div className="container-fluid">
+      <button className="btn ms-auto me-4 w-100" onClick={handleLogout}>
+        <u className="float-end">Logout</u>
+      </button>
       </div>
       {isLoading ? (
         <div className="loader-overlay">

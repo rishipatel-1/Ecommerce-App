@@ -117,6 +117,12 @@ const AdminPanel = () => {
       setIsLoading(false);
     }
   };
+  const handleLogout = () => {
+ 
+    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    window.location.href = '/';
+  };
 
   return (
     <div className="admin-panel">
@@ -136,7 +142,12 @@ const AdminPanel = () => {
               editProduct={editingProduct}
             />
           )}
+     
         </div>
+        <button className="btn ms-auto me-4" onClick={handleLogout}>
+        
+        <u>Logout</u>
+      </button>
       </nav>
       <div className='d-flex justify-content-evenly mt-4'>
         <Row className='adminpanel mt-3'>

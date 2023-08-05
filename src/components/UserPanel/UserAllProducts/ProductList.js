@@ -28,7 +28,7 @@ const ProductList = ({ addToCart }) => {
 
   const filteredProducts = filter === 'all'
     ? products
-    : products.filter(product => product.product_status === filter);
+    : products.filter(product => product.status === filter);
 
 
   const [activeIndexes, setActiveIndexes] = useState({});

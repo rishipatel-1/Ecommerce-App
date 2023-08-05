@@ -109,7 +109,7 @@ const ProductCard = ({ product, filter, onEdit, onDelete }) => {
               ))}
             </Carousel>
             <Card.Text>{product.description}</Card.Text>
-            <Card.Text>Price: ${product.price}</Card.Text>
+            <Card.Text>Price: Rs<span className="ms-1">{product.price}</span></Card.Text>
             <Card.Text style={{ color: getStatusColor() }}>
               Status:{" "}
               {product.status === "Available"
