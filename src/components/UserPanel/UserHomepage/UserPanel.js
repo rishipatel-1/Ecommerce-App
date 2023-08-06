@@ -143,7 +143,7 @@ const UserPanel = ({ products }) => {
         />
       </div>
       <div className="container-fluid">
-      <button className="btn ms-auto me-4 w-100" onClick={handleLogout}>
+      <button className="btn ms-auto w-100" onClick={handleLogout}>
         <u className="float-end">Logout</u>
       </button>
       </div>
